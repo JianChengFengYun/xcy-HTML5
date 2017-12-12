@@ -1,0 +1,29 @@
+*{margin:0px;padding:0px;}
+body{font-family:微软雅黑;font-size:14px;background:#f9f9f9;}
+
+#box{width:900px;margin:0px auto;}
+
+.header{width:900px;height:60px;margin:10px 0px 50px;}
+
+.section{width:880px;padding:10px;background:#eee;border-radius:5px;}
+
+.header img,.header h1{float:left;}
+.header h1{width:200px;height:40px;line-height:40px;margin-left:20px;border-left:1px solid #ccc;padding-left:20px;margin-top:10px;color:#444;}
+
+table{width:100%;background:#fff;border-left:1px solid #eee;border-right:1px solid #eee;}
+
+input[type="text"],input[type="password"]{width:250px;height:30px;line-height:30px;border:none;border:1px solid #ddd;border-radius:3px;}
+input[type="text"]{background:url("../images/user.png") no-repeat right center;}
+input[type="password"]{background:url("../images/pwd.png") no-repeat right center;}
+.btn1{background:#F00;color:#FFF;width:250px;height:30px;border:none;border:1px solid #f00;border-radius:3px;}
+.btn2{background:#0F0;color:#FFF;width:150px;height:30px;border:none;border:1px solid #0F0;border-radius:3px;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+/*********
+*demo1
+********/
+*{margin:0px;padding:0px;}
+li{list-style:none;}
+
+#box{width:98%;height:50px;margin:10px;border:1px solid #0f0;border-radius:5px;}
+li{border:1px solid #0f0;padding:0px 10px;margin-left:10px;border-radius:5px;float:left;}
+li:hover{border:1px solid #fff;}
+li:hover a{color:#333;text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

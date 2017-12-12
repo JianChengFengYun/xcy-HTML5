@@ -1,0 +1,63 @@
+<!doctype html>
+<html >
+			<head>
+					<meta charset="UTF-8">
+					<title>form的input元素</title>
+			</head>
+			<body>
+				<form action="zhuce.php" method="post" enctype="maltipart/form-data">
+				<table align="center" cellspacing="10px" cellpadding="5px" width="600">
+					<tr>
+						<td><label for="txtUName">用户名称：</label></td>
+						<td>
+							<input type="text" name="txtUser" id="txtUName" value="用户名" maxlength="18" />
+							<span style="color:#f00;font-size:12px;">最多18位</span>
+						</td>
+					</tr>
+					<tr>
+						<td>用户密码：</td>
+						<td>
+							<input type="password" name="txtPass" maxlength="12" />
+							<span  style="color:#f00;font-size:12px;">最多12位</span>
+						</td>
+					</tr>
+					<tr>
+						<td>确认密码：</td>
+						<td><input type="password" name="txtPass" maxlength="12" /></td>
+					</tr>
+					<tr>
+						<td>用户性别：</td>
+						<td>
+							<input type="radio" name="rdoGender" value="Male"  checked /> 男 
+							<input type="radio" name="rdoGender" value="feMale" /> 女
+						</td>
+					</tr>
+					<tr>
+						<td>用户爱好：</td>
+						<td>
+							<input type="checkbox" name="" value="吃" /> 吃 
+							<input type="checkbox" name="" value="喝" /> 喝 
+							<input type="checkbox" name="" value="玩" /> 玩 
+							<input type="checkbox" name="" value="乐" /> 乐
+						</td>
+					</tr>
+					<tr>
+						<td>用户头像：</td>
+						<td><input type="file" name=""  /></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="left">
+							<iframe src="form3.html" frameborder="0" width="100%" height="300"></iframe>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" value="注册" disabled>
+							<input type="reset" value="清空">
+						</td>
+					</tr>
+				</table>
+				</form>
+			</body>
+</html>

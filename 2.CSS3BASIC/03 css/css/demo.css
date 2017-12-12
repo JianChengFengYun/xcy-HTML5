@@ -1,0 +1,78 @@
+*{margin:0px;paddign:0px;}
+body{
+	font-family:Times,Arial,微软雅黑;
+	font-size:14px;
+}
+div#ct{width:1000px;margin:0 auto;}
+
+/*****
+****
+*demo1
+****
+****/
+
+.p1{
+	font-weight:bold;
+	font-variant:small-caps;
+	font-style:italic;
+}
+
+/*****
+****
+*demo2
+****
+****/
+
+.div1{width:600px;height:200px;border:1px solid #f00;
+color:#0f0;text-align:left;text-decoration:line-through;text-indent:24px;line-height:200px;text-shadow: 2px 2px 1px #ccc;
+font-variant:small-caps;font-style:italic;font-size:24px;}
+
+/*****
+****
+*demo3
+****
+****/
+
+.ov1,.ov2,.ov3{width:100px;height:100px;border:1px solid #f00;}
+.ov1{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.ov3{white-space:nowrap;}
+
+
+/*****
+****
+*demo4
+****
+****/
+
+
+
+.tab1{width:300px;height:300px;border:1px solid #f00;
+	/*****border-collapse:collapse;****/
+	border-collapse:separate;
+	border-spacing:10px 30px;
+	caption-side:bottom;
+	}
+.tab1 td{width:100px;border:1px dashed #0f0;vertical-align:top;}
+
+
+
+
+/*****
+****
+*demo5
+****
+****/
+div.float1,div.float2,div.float3,div.float4{width:200px;height:200px;margin:5px;border:5px dotted #333;}
+div.float1{background:#f00;float:left;}
+div.float2{background:#00f;float:left;}
+div.float3{background:#0f0;float:left;clear:left;}
+div.float4{background:yellow;float:left;}
+
+
+
+
+
+
+
+
+

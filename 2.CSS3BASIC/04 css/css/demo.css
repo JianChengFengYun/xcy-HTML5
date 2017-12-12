@@ -1,0 +1,32 @@
+*{margin:0px;padding:0px;}
+body{
+	font-family:Times,Arial,微软雅黑;
+	font-size:14px;
+}
+div#ct{width:1000px;margin:0 auto;}
+
+/*****
+****
+*demo1
+****
+****/
+div p{width:100px;height:100px;border:1px solid #f00;margin:5px;}
+.vis2{visibility:hidden;}
+.vis3{display:none;}
+.vis4{visibility:visible;cursor:wait;}
+.vis5{display:inline;}
+
+.opacity1{width:100px;height:100px;border:1px solid #f00;opacity:0.5;}
+
+
+/*****
+****
+*demo2
+****
+****/
+.ul{list-style-position:inside;}
+.ul li{border:1px solid #f00;}
+.ul li{list-style-image:url("../images/pwd.jpg")}
+
+
+

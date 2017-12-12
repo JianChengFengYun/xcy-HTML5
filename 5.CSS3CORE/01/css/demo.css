@@ -1,0 +1,52 @@
+/*************demo1*************/
+
+/***通用选择器***/
+*{margin:0px;padding:0px;font-size:14px;font-family:"Microsoft Yahei";line-height:30px;}
+
+/***相邻兄弟选择器***/
+div.s1,p{width:90%;margin-left:5%;height:100px;border:1px solid #333;}
+div.s1+p{color:red;}
+div.s1~p{background:#ccc;}
+
+
+/*************demo2*************/
+.improtant{font-weight:bold;}
+.warning{color:red;}
+p[id]{border:1px solid red;}
+p[id=summary]{background:pink;}
+p[class~=warning]{font-size:20pt;}
+p[title^=f]{font-size:15pt;}
+p[title*=con]{font-size:20pt;}
+p[title$=rd]{font-size:25pt;}
+
+
+
+/*************demo3*************/
+div.split{height:1029px;}
+:target{border:1px solid red;}
+div:target{background:#ccc;}
+
+
+/*************demo4*************/
+input:enabled{font-weight:bold;}
+input:disabled{background:#e4393c;}
+input:checked{background:#e4393c;}
+
+
+/*************demo5*************/
+
+#div1 p{border:0px solid #333;height:30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

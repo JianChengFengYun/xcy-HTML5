@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title>css 选择器</title>
+		<meta charset="utf-8" />
+		<!--引入外部样式表-->
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	</head>
+	<body>
+		<div id="main">
+			<fieldset>
+				<legend>元素选择器</legend>
+				<p>元素选择器</p>
+				<div>元素选择器</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>类选择器</legend>
+				<h2 class="myClass">h2文本</h2>
+				<div class="myClass impro warning">div文本</div>
+				<p>p文本</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>分类选择器</legend>
+				<div>div文本</div>
+				<div class="fenlei">div文本</div>
+				<div>div文本</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>id选择器</legend>
+				<div id="mostName">id选择器地文本</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>id群组选择器</legend>
+				<!--div1背景 绿-->
+				<div id="div1">id为div1的div</div>
+				<!--p.square 背景 蓝-->
+				<p class="square">class为square的p</p>
+				<!--div1背景 黄-->
+				<div class="base">class为base的div</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>后代选择器</legend>
+				<h1>
+					这是H1标签
+					<span class="improtant">
+						在h1里面的span
+					</span>
+				</h1>
+			</fieldset>
+
+			<fieldset>
+				<legend>子代选择器</legend>
+				<span class="circle">fieldset的子代span</span>
+				<div>
+					<span class="disk">fieldset的后代span</span>
+				</div>
+			</fieldset>
+			
+			<div class="red">111111111</div>
+			<div>22222222222</div>
+			<div>333333333
+				 <div class="red">子div</div>
+			</div>
+			<div >4444444444</div>
+
+			<fieldset>
+				<legend>伪类选择器</legend>
+				<a href="http://www.tmooc.cn">链接到TTS</a>
+				<input type="text" value="用户名称" class="txt" />
+			</fieldset>
+
+			
+
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+	</body>
+</html>

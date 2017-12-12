@@ -1,0 +1,56 @@
+*{margin:0px;padding:0px;}
+ul{list-style:none;}
+.clear{clear:both;}
+body{
+	font-family:Times,Arial,微软雅黑;
+	font-size:12px;
+}
+div#ct{width:900px;margin:0 auto;}
+
+
+#nav{width:900px;height:40px;background:#e64346;margin-top:10px;}
+
+/***商品分类***/
+#category{float:left;}
+#category p{width:210px;height:40px;background:#cd2a2b;}
+#category p a:link,#category p a:visited,#category p a:hover,#category p a:active
+	{display:inline-block;line-height:40px;padding-left:20px;color:#fff;font-size:14px;font-weight:bold;text-decoration:none;}
+#category span{float:right;margin:10px;padding:10px;background:url("iconlist_2.png") no-repeat -65px 0px;cursor:pointer;}
+
+/***分类li***/
+#category div.cate_box
+		{border:2px solid #cd2a2b;border-top:0px;width:206px;height:400px;padding-top:5px;background:#fafafa;
+		position:relative;}
+
+#category div.cate_box li{}
+#category div.cate_box li h3{font-weight:normal;width:180px;height:29px;line-height:29px;border-bottom:1px solid #fff;padding-left:20px;position:relative;z-index:5;}
+#category div.cate_box li a{color:#333;text-decoration:none;}
+#category div.cate_box h3:hover
+		{height:28px;line-height:26px;border-bottom:1px solid #dcdcdc;border-top:1px solid #dcdcdc;background:#fff;
+		width:181px;}
+
+/***li的小分类***/
+#sub_cate_box{position:absolute;left:200px;top:5px;
+		width:700px;height:340px;border:1px solid #ddd;box-shadow:1px 1px 1px 1px #eee;
+		padding:10px;
+		background:#fff;}
+#sub_cate_items{width:400px;height:340px;border:1px solid #ddd;float:left;}
+#sub_cate_banner{width:200px;padding:0px 10px;height:340px;border:1px solid #ddd;margin-left:10px;float:right;}
+#sub_cate_banner img{margin:0px;padding:0px;margin-top:10px;}
+#sub_cate_banner p{line-height:40px;color:#f00;font-weight:bold;background:#fff;font-size:14px;}
+#sub_cate_banner li{line-height:20px;}
+#close{width:19px;height:17px;position:absolute;right:-10px;top:-5px;
+		background:url(iconlist_1.png) no-repeat -256px -86px; cursor:pointer;}
+
+/***导航***/
+div.daohang{width:690px;height:40px;line-height:40px;float:left;font-size:14px;font-weight:bold;}
+div.daohang li{float:left;}
+div.daohang a{color:#fff;text-decoration:none;display:block;padding:0px 20px;}
+div.daohang a:hover{background:#bd2a2b;}
+
+
+
+
+
+
+

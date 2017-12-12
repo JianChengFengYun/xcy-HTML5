@@ -1,0 +1,58 @@
+/*************demo6*************/
+
+/***通用选择器***/
+*{margin:0px;padding:0px;font-size:14px;font-family:"Microsoft Yahei";line-height:30px;}
+
+/***元素选择器***/
+p{color:blue;}
+fieldset{padding-left:20px;}
+
+/***类选择器***/
+.myClass{font-size:14px;color:pink;}
+.impro{font-weight:700;}
+.warning{color:red;}
+
+/***分类选择器***/
+div.fenlei{font-size:50px;color:purple;}
+
+div.red{background:red;color:#fff;font-size:40px;}
+
+/***id选择器***/
+#main{width:1000px;margin:0px auto;}
+#mostName{color:#f00;background:yellow;font-size:30px;}
+
+/***群组选择器***/
+#div1,p.square,.base{border:1px dashed purple;width:100px;height:100px;margin-top:10px;}
+#div1{background:green;}
+.square{background:blue;}
+.base{background:yellow;}
+
+/***后代选择器***/
+h1 span.improtant{color:orange;font-size:20px;background:purple;}
+
+/***子代选择器***/
+fieldset>span{color:purple;font-weight:bold;background:silver;}
+
+/***伪类选择器***/
+fieldset a:link{color:silver;text-decoration:none;}
+fieldset a:visited{color:black;}
+fieldset a:hover{color:purple;}
+fieldset a:active{color:red;}
+fieldset input.txt{color:rgb(100%,0%,0%);font-style:italic;}
+fieldset input.txt:focus{font-style:normal;color:black;}
+
+/*************demo7*************/
+
+/***overflow***/
+div.visible,div.hidden,div.scroll,div.auto{width:100px;height:100px;border:1px solid #F00;margin:20px;}
+div.hidden{overflow:hidden;}
+div.scroll{overflow:scroll;}
+div.auto{overflow:auto;}
+
+/***border***/
+input.borderB{border:none;border-bottom:1px solid black;}
+.radius1,.shadow,.bdImage,.outline{border:1px solid #F00;width:200px;height:200px;margin:20px;}
+.radius1{border-radius:50% 50% 50% 50%;}
+.shadow{box-shadow:5px 5px 3px #333;}
+.bdImage{border-image:url("../images/Hydrangeas.jpg") 30 round;}
+.outline{outline:#f00 dashed 5px;}

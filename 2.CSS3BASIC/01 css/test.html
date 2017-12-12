@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>css-overflow</title>
+		<meta charset="utf-8" />
+		<!--引入外部样式表-->
+		<style>
+			*{margin:0px;padding:0px;}
+			table{position:absolute;top:50%;left:50%;margin-left:-400px;margin-top:-200px;}
+			.yzm{width:50px;}
+			.zhuc{width:200px;height:30px;background:#f00;color:#fff;border:none;}
+		</style>
+	</head>
+	<body>
+		<table width="800" height="400"  border="0" cellspacing="0" cellpadding="0" >
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="" /></td>
+				<td>4-20字符，支持汉字、字母、数字</td>
+			</tr>
+			<tr>
+				<td>请设置密码：</td>
+				<td><input type="password" name="" /></td>
+				<td>4-20字符，支持汉字、字母、数字</td>
+			</tr>
+			<tr>
+				<td>请确认密码：</td>
+				<td><input type="password" name="" /></td>
+				<td>请再次输入密码</td>
+			</tr>
+			<tr>
+				<td>验证手机：</td>
+				<td><input type="text" name="" /></td>
+				<td>完成验证后，可以使用手机找回密码</td>
+			</tr>
+			<tr>
+				<td>短信验证码：</td>
+				<td><input type="text" name="" class="yzm" /><input type="button" value="获取短信验证码" /></td>
+				<td>输入验证码</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="checkbox" name="" /> 我已阅读并同意<a href="#">《京东用户注册协议》</a</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" value="立即注册" class="zhuc" /></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<title>内容生成</title>
+		<meta charset="utf-8" />
+		
+		<style>
+			div.lw:before{
+					content:"老王:";
+					padding-right:10px;
+			}
+			div.xm:before{
+					content:"小明:";
+					padding-right:10px;
+			}
+
+			div.content a{display:block;}
+			div.content a:before{
+					content:url(images/Hydrangeas.jpg);
+			}
+
+			body{counter-reset:chapter pcount;}
+			h1{counter-increment:chapter 1;}
+			h1:before{
+				content:"第"counter(chapter)"章";
+			}
+			p{counter-increment:pcount 10;}
+			p:before{
+				content:"第"counter(pcount)"章";
+			}
+		</style>
+	</head>
+	<body>
+		<div class="lw">
+			今天下午有时间吗？
+		</div>
+		<div class="xm">
+			干什么？
+		</div>
+		<div class="lw">
+			接我妹
+		</div>
+		<div class="xm">
+			我去，接你妹！
+		</div>
+		<div class="lw">
+			你妹！
+		</div>
+
+		<div class="content">
+			<a href="http://www.baidu.com">百度</a>
+			<a href="http://www.google.com">谷歌</a>
+			<a href="http://www.yahoo.com">雅虎</a>
+		</div>
+
+		<h1>WEB 基础知识</h1>
+		<h1>HTML 基础知识</h1>
+		<h1>CSS 基础知识</h1>
+		<p>WEB 基础知识</p>
+		<p>HTML 基础知识</p>
+		<p>CSS 基础知识</p>
+	</body>
+</html>

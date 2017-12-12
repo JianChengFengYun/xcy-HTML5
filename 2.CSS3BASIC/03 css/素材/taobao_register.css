@@ -1,0 +1,164 @@
+/* 布局样式 */
+body
+{
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+    background-color: #fff;
+    color: #3C3C3C;
+    font:12px arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+header,section,footer
+{
+    width: 1190px;
+    margin:0px auto;
+    overflow:hidden;
+}
+/*顶部导航*/
+nav
+{
+    width: 100%;
+    height:35px;
+    background: #F5F5F5;
+    border-bottom: 1px solid #EEE;
+}
+/*头部*/
+header
+{
+    padding: 10px 0;
+}
+header h2
+{
+    display: inline-block;
+    height: 43px;
+    line-height: 43px;
+    margin-left: 6px;
+    font-size: 22px;
+    font-weight: bold;
+}
+/*注册步骤*/
+#steps
+{
+    height: 40px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+/*注册框*/
+#register_box
+{
+    width: 770px;
+    margin:0px auto;
+    padding:10px 0px;
+    font-size: 14px;
+    overflow:hidden;
+}
+#register_box>div
+{
+    padding: 10px;
+    line-height: 36px;
+    overflow:hidden;
+}
+span.form_label
+{
+    float: left;    
+    width: 240px;
+    height: 37px;
+    line-height: 37px;
+    text-align: right;
+    margin-right:10px;
+}
+#register_box>div select
+{
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    width:120px;
+}
+/*手机号码相关*/
+div.mobile_info,div.code_info
+{
+    font-size:14px;
+    line-height:36px;
+    float: left;  
+}
+div.mobile_info span
+{
+    float:left;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #ededed;
+    color: #999;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-right:0;
+}
+div.mobile_info input
+{
+    padding-left: 5px;
+    border: 1px solid #dedede;
+    width: 162px;
+    height: 33px;
+    line-height: 33px;    
+}
+/*提示信息*/
+p.info,p.error,p.ok
+{
+    float:left;
+    color: #000;
+    font-size: 12px;
+    height: 35px;
+    background:url(images/info.jpg) no-repeat 2px center;
+    padding-left:20px;
+    margin:0px;
+}
+p.error
+{
+    color: #ff3f13;
+    background:url(images/error.jpg) no-repeat 2px center;
+}
+p.ok
+{
+    background:url(images/ok.jpg) no-repeat 2px center;
+}
+/*验证码相关*/
+div.code_info input
+{
+    padding-left: 5px;
+    border: 1px solid #dedede;
+    width: 122px;
+    height: 33px;
+    line-height: 33px;
+}
+div.code_info img
+{
+    vertical-align:middle;
+}
+/*注册*/
+label[for="chk_agree"]
+{
+    font-size:12px;
+    line-height:36px;
+}
+label[for="chk_agree"] a
+{
+    color: #ff5b20;
+    text-decoration: none;
+}
+label[for="chk_agree"] a:hover
+{
+    text-decoration: underline;
+}
+input.btn_regis_next
+{
+    width:180px;
+    height: 36px;
+    padding: 0 20px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: #ff4001;
+    border: none;
+    border-radius: 3px;
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>结构伪类</title>
+		<meta charset="utf-8" />
+		
+		<style>
+			p:first-child{color:red;background:#ccc;}
+			p:last-child{color:blue;}
+			p:empty{border:1px solid green;height:50px;}
+			div:only-child{border:1px solid black;}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>段落1</p>
+			<p></p>
+			<br>
+			<p> </p>
+			<p>段落2</p>
+			<p>段落3</p>
+		</div>
+	</body>
+</html>

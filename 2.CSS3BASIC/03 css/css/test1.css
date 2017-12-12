@@ -1,0 +1,56 @@
+/*********
+*demo1
+********/
+*{margin:0px;padding:0px;}
+li{list-style:none;}
+body{font-size:14px;font-family:微软雅黑;color:#333;}
+
+#box{width:90%;height:200px;border:1px solid #D4E2BE;border-radius:5px;margin:10px;padding:10px;}
+.pingji{width:77px;height:19px;background:url("../images/iconlist_1.png") no-repeat -107px -237px;}
+hr{margin:10px 0px}
+table{width:100%;}
+td{padding:5px;}
+.td1{width:8%}
+.td2{width:92%;text-align:left;}
+td mark{padding:0px 10px;background-color:#fdedd3;color:#000;}
+.btn{}
+.btn input{margin-right:20px;width:60px;height:40px;text-align:center;border:none;border:1px solid #d3d5d4;border-radius:5px;
+			background-image:linear-gradient(to bottom,#f8f8f8 0%,#d3d5d4 100%);
+			}
+
+ul{}
+li{border:1px solid #D4E2BE;padding:0px 10px;margin-left:10px;border-radius:5px;float:left;}
+.li1{border:1px solid #fff;}
+.li1 a:link{color:orange;font-weight:bold;}
+li a:link{text-decoration:none;color:blue;}
+li a:visited{color:blue;}
+li a:hover{color:#f00;}
+li:hover{border:1px solid #333;}
+.li1:hover{border:1px solid #fff;}
+li:hover a{color:#f00;}
+li a:active{color:#f00;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

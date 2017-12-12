@@ -1,0 +1,26 @@
+1.页面
+
+- 导航：nav
+- 分类：div-id :category；
+	p    :链接 箭头；
+
+2.样式：
+
+- 文本:
+  * 12px #666 Arial,"Microsoft"
+
+- nav :
+  width:900px;
+  height:40px;
+  margin
+  bg
+
+3.category:
+ width:210px;
+ float
+ bg
+
+- a
+ display:line-block;
+- span
+ 20*20

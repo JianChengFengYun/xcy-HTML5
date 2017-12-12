@@ -1,0 +1,62 @@
+<!doctype html>
+<html >
+			<head>
+					<meta charset="UTF-8">
+					<title>form的属性：action method</title>
+			</head>
+			<body>
+				<form action="zhuce.jsp" method="get">
+					<fieldset>
+						<legend>基本信息</legend>
+						<!--用户名称：<input type="text" name="myname" value="用户名" maxlength="12" />-->
+						
+						<label for="txtUName">用户名称：</label>
+						<input type="text" name="myname" id="txtUName" value="用户名" maxlength="12" />
+
+						<br>
+						<!--密&nbsp;&nbsp;码：<input type="password" name="pass" value="abjvak" readonly />-->
+						密&nbsp;&nbsp;码：<input type="password" name="pass" />
+
+						<br>
+						性&nbsp;&nbsp;别：<input type="radio" name="rdoGender" value="Male" checked />男
+										  <input type="radio" name="rdoGender" value="FeMale" />女
+										  <input type="radio" name="rdoGender" value="UnKnown" />不详
+					</fieldset>
+
+					<br>
+					隐藏域：<input type="hidden" name="id" value="110"  />
+
+					<br>
+					用户头像：<input type="file" name="image" value="文件筐"  />
+
+					<br>
+					文本域：
+					<textarea name="info" cols="40" rows="10" readonly>
+						1.忠于祖国忠于党...忠于祖国忠于党...忠于祖国忠于党...
+						2.拒绝...
+						3.不发反动信息...
+						1.忠于祖国忠于党...
+						2.拒绝...
+						3.不发反动信息...
+					</textarea>
+					
+					<br>
+					从何而来：
+					<select name="selForm" size="3" multiple>
+						<option value="east">东土大唐</option>
+						<option value="world">西方极乐</option>
+						<option value="sky">帝国</option>
+						<option value="south" selected>南天门</option>
+						<option value="east">东土大唐</option>
+						<option value="world">西方极乐</option>
+						<option value="sky">帝国</option>
+						<option value="south">南天门</option>
+					</select>
+					<br>
+					<br>
+					<input type="submit" value="登录"  />
+					<input type="reset" value="重置"  />
+					<input type="button" value="按钮" onclick="alert(1234);" />
+				</form>
+			</body>
+</html>

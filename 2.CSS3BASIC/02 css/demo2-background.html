@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>background</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<style>
+			body{
+				background-color:#7c4124;
+				background-image:url("img/yu.jpg");
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+				background-position:left;
+				}
+
+			div{width:300px;height:500px;border:1px solid #f00;margin-left:300px;}
+
+			.box{
+				background-image:url("img/yu.jpg");
+				background-repeat:no-repeat;
+				/***
+				background-size:50px 80px;
+				***/
+				/***
+				background-size:20% 20%;
+				***/
+				
+				background-size:cover;
+				
+				/***
+				background-size:contain;
+				***/
+				}
+
+			.box8{
+				background-image:url("img/yu.jpg");
+				background-repeat:no-repeat;
+				/***
+				background-size:50px 80px;
+				***/
+				/***
+				background-size:20% 20%;
+				***/
+				/***
+				background-size:cover;
+				***/
+				background-size:contain;
+				}
+			.box9{background:url("images/image14.jpg") no-repeat 20px 50px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">class为box的div</div>
+		<div class="box8">class为box的div</div>
+		<div class="box9">class为box的div</div>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	</body>
+</html>

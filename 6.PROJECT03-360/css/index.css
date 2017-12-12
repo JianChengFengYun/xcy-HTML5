@@ -1,0 +1,197 @@
+@charset "utf-8";
+header,section,footer{width:100%;}
+
+/*************************************** 页头 ************************************/
+
+header{height:50px;}
+header div.content{width:1000px;margin:0px auto;}
+header div.logo{width:152px;height:27px;float:left;background-image:url("../images/iconlist_1.png");background-position:-868px -100px;margin-top:11px;}
+/*导航*/
+header ul{float:right;}
+header ul li{float:left; position:relative;}
+header ul a{display:block;height:47px;line-height:47px;padding:0px 15px;color:#5c5c5c;
+/*过渡*/
+transition:border 500ms linear 0s;
+}
+header a.android_code,header a.ios{width:66px;height:26px;margin-top:10px;background-image:url("../images/iconlist_2.png");}
+header a.android_code{background-position:-430px -671px;}
+header a.ios{background-position:-1655px -536px;}
+header ul a:not([class]):hover{border-bottom:2px solid #f00;text-decoration:none;color:#5c5c5c;}
+header ul .current{border-bottom:3px solid #f00;text-decoration:none;color:#5c5c5c;}
+/*二维码*/
+header #android_code,header #ios{width:180px;height:210px;background-image:url("../images/iconlist_2.png");background-position:-1654px -297px;position:absolute;top:36px;left:0px;z-index:5;display:none;}
+header #safari:hover div{display:block;}
+
+/*************************************** banner **********************************/
+
+#banner{height:550px;background-color:#dedede;background-image:url("../images/bg_1.jpg");
+/*无边框和无padding时，内部元素的margin-top和margin-bottom会越界；给父元素加overflow:hidden;*/
+overflow:hidden;
+/*让背景图片填满整个区域，旧IE不支持*/
+background-size:100% 100%;
+border-bottom:1px solod #dfdfdf;}
+#banner div.content{width:800px;margin:0px auto;}
+#banner div.title{width:460px;height:55px;background-image:url("../images/iconlist_1.png");background-position:-869px 0;margin:0px auto;
+/*无边框和无padding时，内部元素的margin-top和margin-bottom会越界；给父元素加overflow:hidden;*/
+margin-top:120px;}
+#banner div.title+p{text-align:center;font-size:14px;color:#7e7e7e;line-height:40px;}
+/*小球*/
+#banner ul{height:200px;padding:50px 0px;}
+#banner ul li{position:relative;width:174px;}
+
+#banner ul i,#banner ul b{background-image:url("../images/iconlist_1.png");position:absolute;}
+#banner ul i{width:174px;height:174px}
+
+#banner ul #intro_1 i{z-index:30;}
+#banner ul #intro_1{z-index:5;
+/*调用 #intro_1的移动*/
+-webkit-animation:move1 1.8s linear 0s;
+}
+#banner ul #intro_2 i{background-position:-173px 0px;z-index:30;}
+#banner ul #intro_2{left:150px;z-index:10;
+/*调用 #intro_2的移动*/
+-webkit-animation:move2 2.35s linear 0s;
+}
+#banner ul #intro_3 i{background-position:-347px 0px;z-index:30;}
+#banner ul #intro_3{left:300px;z-index:15;
+/*调用 #intro_3的移动*/
+-webkit-animation:move3 2.9s linear 0s;
+}
+#banner ul #intro_4 i{background-position:-521px 0px;z-index:30;}
+#banner ul #intro_4{left:450px;z-index:20;
+/*调用 #intro_4的移动*/
+-webkit-animation:move4 3.45s linear 0s;
+}
+#banner ul #intro_5 i{background-position:-695px 0px;z-index:30;
+/*调用 #intro_5的旋转*/
+-webkit-animation:rott 4s linear 0s; 
+}
+#banner ul #intro_5{left:600px;z-index:25;
+/*调用 #intro_5的移动*/
+-webkit-animation:move5 4s linear 0s;
+}
+
+#banner ul b{width:173px;height:24px;background-position:-868px -127px;top:160px;z-index:28;}
+
+/*定义 #intro_1的移动*/
+@-webkit-keyframes move1{
+	from{left:-492.72px;}to{left:0px;}
+}
+/*定义 #intro_2的移动*/
+@-webkit-keyframes move2{
+	from{left:-492.72px;}to{left:150px;}
+}
+/*定义 #intro_3的移动*/
+@-webkit-keyframes move3{
+	from{left:-492.72px;}to{left:300px;}
+}
+/*定义 #intro_4的移动*/
+@-webkit-keyframes move4{
+	from{left:-492.72px;}to{left:450px;}
+}
+/*定义 #intro_5的移动 旋转*/
+@-webkit-keyframes move5{
+	from{left:-492.72px;}to{left:600px;}
+}
+@-webkit-keyframes rott{
+	from{transform:rotate(0deg);}to{transform:rotate(720deg);}
+}
+
+/*************************************** 描述 ************************************/
+
+#description{height:650px;}
+#description div.content{width:800px;margin:0px auto;}
+#description h3{font-weight:normal;font-size:40px;color:#424242;font-family:"华文细黑";text-align:center;padding:33px 0px;}
+#description p{font-size:18px;line-height:30px;text-align:center;color:#9c9bad;}
+#description div.content div{width:638px;height:298px;background-image:url("../images/iconlist_2.png");background-position:-1655px 0px;margin:55px auto 0px;}
+
+/*************************************** 一键呼叫 ********************************/
+
+#hujjiao{height:650px;border-top:1px solid #333;border-bottom:1px solid #333;background-image:url("../images/bg_2.jpg");
+/*背景图片没显示完整*/
+background-size:120% 120%;background-position:50% 80%;}
+#hujjiao div{width:50%;float:left;margin-top:100px;padding-right:80px;text-align:right;}
+#hujjiao h3{font-size:40px;font-weight:normal;height:90px;color:#ffe325;line-height:90px;margin:40px 0px;}
+#hujjiao h3>b{width:80px;height:86px;float:right;background-image:url("../images/iconlist_3.png");}
+#hujjiao p{font-size:18px;line-height:30px;color:#8b7f73;}
+#hujjiao>b{float:left;width:255px;height:530px;background-image:url("../images/iconlist_2.png");background-position:-570px -1px;margin-top:70px;
+/*过渡*/
+transition:transform 1s linear 0s;
+}
+#hujjiao>b:hover{transform:rotate(30deg);}
+
+
+/*************************************** 智能提醒 ********************************/
+
+#tixing{height:650px;}
+#tixing div.content{width:962px;height:650px;margin:0px auto;background-image:url("../images/bg_3.jpg");background-position:0px 30px;
+background-repeat:no-repeat;}
+
+/*************************************** 定位记录 ********************************/
+
+#dingwei{height:650px;border-top:1px solid #333;border-bottom:1px solid #333;background-image:url("../images/bg_4.jpg");
+/*背景图片没显示完整*/
+background-size:120% 120%;background-position:50% 80%;}
+#dingwei div{width:50%;float:left;margin-top:100px;padding-left:80px;text-align:left;}
+#dingwei h3{font-size:40px;font-weight:normal;height:90px;color:#12cbf7;line-height:90px;margin:40px 0px;}
+#dingwei h3>b{width:80px;height:86px;float:left;background-image:url("../images/iconlist_3.png");background-position:-170px 0;}
+#dingwei p{font-size:18px;line-height:30px;color:#8b7f73;}
+
+#dingwei h1{float:left;width:40%;}
+#dingwei h1>b{float:right;width:255px;height:530px;background-image:url("../images/iconlist_2.png");background-position:-905px -1px;margin-top:70px;
+/*过渡*/
+transition:transform 1s linear 0s;
+}
+#dingwei h1>b:hover{transform:rotate(-30deg);}
+
+/*************************************** 图标 ************************************/
+
+#icons{height:650px;}
+#icons div.content{width:720px;margin:0px auto;overflow:hidden;padding-top:100px}
+#icons ul li{float:left;width:350px;padding-right:10px;overflow:hidden;padding-bottom:80px;}
+#icons ul b{width:80px;height:80px;float:left;background-image:url("../images/iconlist_3.png");margin-right:10px;}
+#icons ul b:hover{
+-webkit-animation:jump 0.1s linear infinite;
+}
+#icons ul div{float:left;line-height:20px;font-size;11px;color:#a3a3a3;width:260px;}
+#icons ul div h3{color:#ffe325;font-size;16px;padding:10px 0px;}
+
+@-webkit-keyframes jump{
+	0%{transform:rotate(0deg);opacity:1;}
+	25%{transform:rotate(-10deg);opacity:0.5;}
+	50%{transform:rotate(0deg);opacity:1;}
+	75%{transform:rotate(10deg);opacity:0.5;}
+	100%{transform:rotate(0deg);opacity:1;}
+}
+
+#icons .mark_2 b{background-image:url("../images/iconlist_3.png");background-position:-86px 0px;}
+#icons .mark_2 h3{color:#f05157;}
+#icons .mark_3 b{background-image:url("../images/iconlist_3.png");background-position:-170px 0px;}
+#icons .mark_3 h3{color:#17caf6;}
+#icons .mark_4 b{background-image:url("../images/iconlist_3.png");background-position:0px -86px;}
+#icons .mark_4 h3{color:#8ad855;}
+#icons .mark_5 b{background-image:url("../images/iconlist_3.png");background-position:-86px -86px;}
+#icons .mark_5 h3{color:#ff9650;}
+#icons .mark_6 b{background-image:url("../images/iconlist_3.png");background-position:-170px -86px;}
+#icons .mark_6 h3{color:#b099fc;}
+
+
+
+
+
+/*************************************** 页尾 ************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
