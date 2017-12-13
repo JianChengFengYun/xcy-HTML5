@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>使用百度地图嵌入页面</title>
+  <meta charset="utf-8" />
+  <!-- 
+	1. 引入百度地图的JS
+	 * 链接 - http://api.map.baidu.com/api?v=2.0&ak=秘钥
+	 * 必须先申请应用秘钥 - HbUVYMUg6PwbOnXkztdgSQlQ
+  -->
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=HbUVYMUg6PwbOnXkztdgSQlQ"></script>
+ </head>
+
+ <body>
+  <!--
+	在HTML页面中定义用于显示百度地图的容器(元素)
+	* 使用<div></div>元素
+  -->
+  <div id="allmap" style="width:400px;height:400px"></div>
+  <script>
+	/*
+	 * 3. 创建百度地图的对象(Map)
+	 *  * 构造器 - BMap.Map(容器id)
+	 *  * 通过centerAndZoom()进行地图的初始化
+	 *    * 该方法是必要方法
+	 */
+	var map = new BMap.Map("allmap");
+	/*
+	 * 4. 初始化百度地图
+	 *  Map地图对象
+	 *  * 方法 - centerAndZoom(center,zoom)
+	 *    * center参数 - 设置当前的中心点
+	 *      * 类型为Point,zoom参数必须设置
+	 *      * 类型为String,例如"北京",zoom参数可以省略
+	 *    * zoom参数 - 设置地图显示级别
+	 *      * PC端 - 3-19
+	 *      * 移动端 - 3-18
+	 */
+	map.centerAndZoom("北京",12);
+  </script>
+ </body>
+</html>

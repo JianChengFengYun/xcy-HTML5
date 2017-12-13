@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script language="javascript">
+            var context2D;//小球从(0,0)开始移动，横向步长为2，纵向步长为3
+            var x=0,y=0,dx=2,dy=3;
+            function draw(){
+                context2D.fillStyle='red';
+                context2D.clearRect(0,0,canvas.width,canvas.height);
+                //判断边界
+                if(x + dx > canvas.width || x + dx < 0)
+                    dx *= -1;
+                if(y + dy > canvas.height || y + dy < 0)
+                    dy *= -1;
+                x += dx;
+                y += dy;
+                drawArc(x,y);
+            }
+            function drawArc(x,y){
+                //自定义画圆方法
+                context2D.fillStyle="red";
+                context2D.beginPath();
+                context2D.arc(x,y,5,0,Math.PI * 2 ,false);
+                context2D.fill();
+                context2D.closePath();
+            }
+            window.onload = function(){
+                canvas=document.getElementById('canvas');
+                context2D=canvas.getContext('2d');
+                setInterval(draw,20);
+            }
+        </script>
+        <style>
+            canvas{border:1px solid red;}
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="554" height="300"></canvas>
+    </body>
+</html>

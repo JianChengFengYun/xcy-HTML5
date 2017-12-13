@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>记事本案例</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <textarea id="note"></textarea><br>
+  <input type="button" id="add" value="新增">
+  <input type="button" id="save" value="保存">
+  <input type="button" id="read" value="读取">
+  <input type="button" id="update" value="修改">
+  <input type="button" id="dele" value="删除">
+  <input type="button" id="clear" value="清空">
+  <br><br>
+  <div id="show"></div>
+  <!-- 隐藏域-用户看不到 -->
+  <input type="hidden" id="mykey">
+  <script>
+	/*
+	 * 需求分析
+	 * * 新增 - 清空textarea元素中的所有内容
+	 * * 保存 - 保存用户输入的内容
+	 * * 读取 - 读取保存的所有数据内容
+	 *   * 显示在页面中(表格-第一列为单选框)
+	 * * 修改 - 修改指定数据内容
+	 *   * 必须选择其中一条数据
+	 * * 删除 - 删除指定数据内容
+	 *   * 必须选择其中一条数据
+	 * * 清空 - 将保存的所有数据删除
+	 */
+	// 1. 获取页面中所有按钮
+	var add = document.getElementById("add");
+	var save = document.getElementById("save");
+	var read = document.getElementById("read");
+	var update = document.getElementById("update");
+	var dele = document.getElementById("dele");
+	var clear = document.getElementById("clear");
+
+	var note = document.getElementById("note");
+
+	var mykey = document.getElementById("mykey");
+	// 2. 为所有按钮绑定click事件
+	// 新增
+	add.onclick = function(){
+		note.value = "";
+		console.log("新建一个记事本.");
+	}
+	// 保存
+	save.onclick = function(){
+		// 1. 获取用户输入内容
+		var value = note.value;
+		// 获取hidden元素的value属性值
+		var key = mykey.value;
+		// 判断是新增还是修改
+		if(!key){// 新增
+			// 2. 创建key - 唯一
+			key = new Date().getTime();
+		}
+		// 3. 保存数据内容
+		sessionStorage.setItem(key,value);
+		console.log("已经保存成功.");
+	}
+	// 读取 - 所有数据
+	read.onclick = readDatas;
+	function readDatas(){
+		// 获取div元素
+		var show = document.getElementById("show");
+		// 利用string拼完整的HTML代码
+		var myhtml = "<table border='1'><tbody><tr><td></td><td>key</td><td>value</td></tr>";
+		// 1. 获取所有数据的个数
+		var sum = sessionStorage.length;
+		// 2. 遍历所有数据
+		for(var i=0;i<sum;i++){
+			// 3. 根据索引值得到key
+			var key = sessionStorage.key(i);
+			// 4. 根据key得到value
+			var value = sessionStorage.getItem(key);
+			
+			myhtml += "<tr><td><input type='radio' name='mydatas' value='"+i+"'></td><td>"+key+"</td><td>"+value+"</td></tr>";
+		}
+		myhtml += "</tbody></table>";
+		// 将完整的HTML代码插入在div中
+		show.innerHTML = myhtml;
+	}
+	// 修改
+	update.onclick = function(){
+		// 1. 获取用户选择那条记录
+		var radios = document.getElementsByName("mydatas");
+		for(var i=0;i<radios.length;i++){
+			var radio = radios[i];
+			if(radio.checked){
+				// 获取当前单选框的value属性值(索引值)
+				var index = radio.value;
+				// 2. 将对应的key和value值得到
+				var key = sessionStorage.key(index);
+				var value = sessionStorage.getItem(key);
+				// 3. 将得到的value值,写入到textarea中
+				note.value = value;
+				// 4. 将读取的key值,写入到hidden元素的value属性值
+				mykey.value = key;
+			}
+		}
+	}
+	// 删除
+	dele.onclick = function(){
+		var radios = document.getElementsByName("mydatas");
+		for(var i=0;i<radios.length;i++){
+			var radio = radios[i];
+			if(radio.checked){
+				var index = radio.value;
+				var key = sessionStorage.key(i);
+				sessionStorage.removeItem(key);
+				break;
+			}
+		}
+		// 重新执行查询操作
+		readDatas();
+		alert("该条记录成功删除.");
+	}
+	// 清空
+	clear.onclick = function(){
+		sessionStorage.clear();
+		alert("数据已清空.");
+	}
+  </script>
+ </body>
+</html>

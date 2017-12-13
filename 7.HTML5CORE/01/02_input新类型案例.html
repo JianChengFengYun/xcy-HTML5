@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>input新类型案例</title>
+  <meta charset="utf-8" />
+  <style>
+	div {
+		width : 150px;
+		height : 150px;
+		border : solid 1px black;
+	}
+  </style>
+ </head>
+
+ <body>
+  <!--
+	需求
+	* 定义<div>元素 - 用于显示选择后的颜色
+	* 定义<input type="range">元素 - 用于选择颜色的三原色(红|蓝|绿)
+	  * rgb(r,g,b) - 0-255
+  -->
+  <div id="d"></div>
+  <br>
+  红:<input type="range" id="r" min="0" max="255" value="255" onchange="mychange()"><br>
+  蓝:<input type="range" id="b" min="0" max="255" value="255" onchange="mychange()"><br>
+  绿:<input type="range" id="g" min="0" max="255" value="255" onchange="mychange()"><br>
+  <script>
+	// 当选择红|蓝|绿三原色的不同值,在<div>中显示不同颜色
+	function mychange(){
+		// 1. 获取红|蓝|绿的value属性值
+		var r = document.getElementById("r").value;
+		var b = document.getElementById("b").value;
+		var g = document.getElementById("g").value;
+		// 2. 获取<div>元素
+		var d = document.getElementById("d");
+		// 3. 改变<div>元素的背景颜色
+		d.style.background = "rgb("+r+","+g+","+b+")";
+	}
+  </script>
+ </body>
+</html>

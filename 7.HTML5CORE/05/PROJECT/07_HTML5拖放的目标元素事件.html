@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>HTML5拖放的目标元素事件</title>
+  <meta charset="utf-8" />
+  <style>
+	#d1 {
+		width : 300px;
+		height : 300px;
+		border : solid 1px black;
+		float : left;
+	}
+	#d2 {
+		width : 300px;
+		height : 300px;
+		border : solid 1px black;
+		float : right;
+	}
+  </style>
+ </head>
+
+ <body>
+  <!-- 源元素 -->
+  <div id="d1">
+	<img id="myimg" src="Penguins.jpg" width="256" />
+  </div>
+  <!-- 目标元素 -->
+  <div id="d2"></div>
+  <script>
+	// 1. 获取目标元素
+	var d2 = document.getElementById("d2");
+	// 2. 为目标元素绑定事件
+	d2.addEventListener("dragenter",MyDragEnter);
+	d2.addEventListener("dragover",MyDragOver);
+	d2.addEventListener("drop",MyDrop);
+	d2.addEventListener("dragleave",MyDragLeave);
+	// 3. 定义事件的处理函数
+	function MyDragEnter(){
+		console.log("大爷,你来啦....");
+	}
+	function MyDragOver(){
+		event.preventDefault();
+		console.log("大爷,你来啦啦啦啦....");
+	}
+	function MyDrop(){
+		console.log("大爷,不走啦....");
+	}
+	function MyDragLeave(){
+		console.log("大爷,常来啊....");
+	}
+  </script>
+ </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>video元素自定义控制面板</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <video id="mmedia" src="../../DATA/oceans-clip.mp4"></video>
+  <br>
+  <input type="button" value="play" id="play">
+  <script>
+	// 1. 获取button按钮
+	var btn = document.getElementById("play");
+	var mmedia = document.getElementById("mmedia");
+	// 2. 为button按钮绑定click事件
+	btn.addEventListener("click",myPlay);
+	// 3. 定义处理函数
+	function myPlay(){
+		// 判断当前视频是否暂停
+		if(mmedia.paused){
+			mmedia.play();
+			btn.value = "Pause";
+		}else{
+			mmedia.pause();
+			btn.value = "Play";
+		}
+		
+	}
+  </script>
+ </body>
+</html>

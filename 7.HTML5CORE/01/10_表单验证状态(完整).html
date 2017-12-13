@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>表单验证状态(完整)</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <form>
+	用户名:<input type="text" id="user" required><br>
+	email地址:<input type="email" id="email"><br>
+	密码:<input type="text" id="pwd" pattern="^[a-zA-Z]{6,12}$"><br>
+	确认密码:<input type="text" id="repwd" maxlength="10"><br>
+	年龄:<input type="number" id="age" min="10" max="20"><br>
+	成绩:<input type="number" id="score" min="60" max="100" step="10">
+	<input type="submit" value="注册">
+  </form>
+  <script>
+	var user = document.getElementById("user");
+	user.onblur = function(){
+		if(user.validity.valueMissing){
+			console.log("用户名不能为空.");
+		}
+	}
+	var email = document.getElementById("email");
+	email.onblur = function(){
+		if(email.validity.typeMismatch){
+			console.log("email输入格式错误.");
+		}
+	}
+	var pwd = document.getElementById("pwd");
+	pwd.onblur = function(){
+		if(pwd.validity.patternMismatch){
+			console.log("密码输入错误.");
+		}
+	}
+	var repwd = document.getElementById("repwd");
+	repwd.onblur = function(){
+		if(repwd.validity.tooLong){
+			console.log("密码输入过长.");
+		}
+	}
+	var age = document.getElementById("age");
+	age.onblur = function(){
+		if(age.validity.rangeUnderflow){
+			console.log("年龄过小,不符合!");
+		}
+	}
+	var score = document.getElementById("score");
+	score.onblur = function(){
+		if(score.validity.valid){
+			console.log("成绩输入正确.");
+		}else if(score.validity.stepMismatch){
+			console.log("成绩输入不符.");
+		}
+	}
+  </script>
+ </body>
+</html>

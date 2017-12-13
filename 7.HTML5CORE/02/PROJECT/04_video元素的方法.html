@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>video元素的方法</title>
+  <meta charset="utf-8" />
+  <style>
+	#adv {
+		display : none;
+		position : absolute;
+		top : 30px;
+		left : 187px;
+	}
+  </style>
+ </head>
+
+ <body>
+  <video id="mmedia" src="../DATA/oceans-clip.mp4" controls></video>
+  <div id="adv">
+	<img src="Penguins.jpg" width="265" />
+  </div>
+  <script>
+	// 1. 获取HTML页面video元素
+	var mmedia = document.getElementById("mmedia");
+	// 2. 获取广告图片
+	var adv = document.getElementById("adv");
+	// 3. video元素的事件绑定 - play|pause
+	mmedia.addEventListener("play",myPlay);
+	mmedia.addEventListener("pause",myPause);
+	// 4. 定义事件对应的处理函数
+	function myPlay(){
+		// 视频播放,隐藏
+		adv.style.display = "none";
+	}
+	function myPause(){
+		// 视频暂停,显示
+		adv.style.display = "block";
+	}
+	/*
+	 * video元素
+	 * * 与其他元素的定位是相对定位时
+	 * 问题
+	 * * 当video视频全屏时,浏览器认为video最前端
+	 *   * 图片是有显示的,被视频覆盖了
+	 * 利用video事件完成广告效果
+	 * * BUG - 不能全屏
+	 * 解决方案
+	 * * 等待HTML5更新
+	 * * 利用video元素提供的高级编程自己实现
+	 * * 使用目前封装好的video的JS库
+	 */
+  </script>
+ </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>百度地图的相关组件</title>
+  <meta charset="utf-8" />
+  <script src="http://api.map.baidu.com/api?v=2.0&ak=HbUVYMUg6PwbOnXkztdgSQlQ"></script>
+ </head>
+
+ <body>
+  <div id="allmap" style="width:800px;height:600px"></div>
+  <script>
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom("北京",12);
+	/*
+	 * 为百度地图添加控件
+	 * Control类
+	 * ScaleControl类 - 表示比例尺控件
+	 * * 构造器 - ScaleControl()
+	 * * 方法
+	 *   * setUnit() - 设置比例尺的单位
+	 *   * getUnit() - 获取比例尺的单位
+	 * * 添加位置,默认为左下角
+	 *   * 构造器的参数ScaleControlOptions类型
+	 *     * anchor - 设置控件的停靠位置
+	 *       * BMAP_ANCHOR_TOP_LEFT
+	 *       * BMAP_ANCHOR_TOP_RIGHT
+	 *       * BMAP_ANCHOR_BOTTOM_RIGHT
+	 *       * BMAP_ANCHOR_BOTTOM_LEFT - 默认值
+	 * 将创建的控件添加到百度地图中
+	 * * 通过Map对象的addControl()方法
+	 */
+	// 创建比例尺控件对象
+	var scale = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT});
+	// 将比例尺控件添加到百度地图中
+	map.addControl(scale);
+	/*
+	 * Control类 - 控件类
+	 * NavigationControl类 - 表示地图的平移缩放控件
+	 * * 构造器 - NavigationControl()
+	 * Map对象移除控件 - removeControl()
+	 */
+	var nav = new BMap.NavigationControl();
+	map.addControl(nav);
+	/*
+	 * Overlay类 - 地图的遮盖物
+	 * Marker类 - 表示地图上一个图像标注
+	 * * 构造器 - Marker(point)
+	 *   * point - 标注的坐标值
+	 * Map对象添加遮盖物
+	 * * addOverlay(marker)
+	 * Point类 - 表示一个地理坐标点
+	 * * 构造器 - Point(lng,lat)
+	 *   * lng - number类型,表示经度
+	 *   * lat - number类型,表示纬度
+	 * * 如何获取位置的经度和纬度值?
+	 */
+	var point = new BMap.Point(116.404, 39.915);
+	// 创建地图标注
+	var marker = new BMap.Marker(point);
+	// 添加标注
+	map.addOverlay(marker);
+  </script>
+ </body>
+</html>

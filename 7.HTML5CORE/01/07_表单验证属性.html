@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>表单验证属性</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <form>
+	用户名:<input type="text" id="user" required><br>
+	密码:<input type="text" id="pwd" pattern="^[a-zA-Z]{6,12}$"><br>
+	年龄:<input type="number" min="0" max="100"><br>
+	email地址:<input type="text" minlength="6" maxlength="10"><br>
+	<input type="submit">
+  </form>
+ </body>
+</html>

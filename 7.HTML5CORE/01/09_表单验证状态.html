@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>表单验证状态</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <!--
+  <form onsubmit="return formValiadator();">
+	用户名:<input type="text" id="user">
+	<input type="submit" value="注册">
+  </form>
+  <script>
+	function formValiadator(){
+		var user = document.getElementById("user");
+		if(user.value == "" || user.value == null){
+			console.log("用户名不能为空");
+			return false;
+		}
+	}
+  </script>
+  
+  <form onsubmit="return formValidator();">
+	用户名:<input type="text" id="user" required>
+	<input type="submit" value="注册">
+  </form>
+  <script>
+	/*
+	 * formValidator()方法并没有被执行
+	 * * required属性 - 底层代码应该具有事件
+	 * * 表单提交 - 具有提交事件
+	 * 注意
+	 * * 先触发input元素的required对应的事件
+	 * * 再触发onsubmit事件
+	 * * 经过实际测试,required被执行,但onsubmit事件每被触发
+	 * 结论
+	 * * required底层具有的事件,阻止了事件冒泡
+	 * * 配合required验证属性完成表单验证功能(js),使用onsubmit事件
+	 */
+	function formValidator(){
+		var user = document.getElementById("user");
+		if(user.validity.valueMissing){
+			// 对应元素值为空
+			console.log("用户名不能为空");
+			return false;
+		}else{
+			// 对应元素值不为空
+		}
+	}
+  </script>
+  -->
+  <form>
+	用户名:<input type="text" id="user" required>
+	<input type="submit" value="注册">
+  </form>
+  <script>
+	var user = document.getElementById("user");
+	user.onblur = function(){
+		if(user.validity.valueMissing){
+			console.log("用户名不能为空");
+		}
+	}
+  </script>
+ </body>
+</html>

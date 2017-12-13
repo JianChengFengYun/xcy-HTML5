@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>计时器案例</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <input id="start" type="button" value="开始计时">
+  <input id="stop" type="button" value="结束计时">
+  <br>
+  <div id="showTime"></div>
+  <script>
+	/*
+	// 1. 获取两个button按钮元素
+	var start = document.getElementById("start");
+	var stop = document.getElementById("stop");
+	// 2. 分别绑定click事件
+	var time = 0;
+	start.onclick = addTime;
+	function addTime(){
+		var showTime = document.getElementById("showTime");
+		showTime.innerHTML = "<h3>"+time+"</h3>";
+
+		time++;
+
+		t = setTimeout("addTime()",1000);
+	}
+	stop.onclick = function(){
+		clearTimeout(t);
+	}
+	*/
+	/*
+	 * setTimeout() - 定时器
+	 * setInteval() - 周期性(- 10:25 练习)
+	 */
+	var start = document.getElementById("start");
+	var stop = document.getElementById("stop");
+	var time = 0;
+	start.onclick = function(){
+		setInterval(function(){
+			var showTime = document.getElementById("showTime");
+			showTime.innerHTML = "<h3>"+time+"</h3>";
+
+			time++;
+
+		},1000);
+	}
+  </script>
+ </body>
+</html>

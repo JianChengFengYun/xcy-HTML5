@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>input新类型一</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <form>
+	<!--
+		<input type="email">
+		* 作用 - 提交表单时,验证是否包含"@"
+		* 问题 - 验证逻辑并不完整
+	-->
+	email类型:<input type="email"><br>
+	搜索类型:<input type="search"><br>
+	<!--
+		<input type="url">
+		* 作用 - 提交表单时,验证是否包含"http://"
+		* 问题 - 验证逻辑并不完整
+	-->
+	URL类型:<input type="url"><br>
+	<!--
+		<input type="tel">
+		* 注意 - 效果只能在手机端出现
+	-->
+	电话号码类型:<input type="tel"><br>
+	<!--
+		<input type="number">
+		* min - 最小值
+		* max - 最大值
+		* step - 步长,默认值为1
+	-->
+	数字类型:<input type="number" min="0" max="10" step="2"><br>
+	<!--
+		<input type="range">
+		* min - 最小值
+		* max - 最大值
+		* step - 步长
+		* value - 当前值
+	-->
+	范围类型:<input type="range" min="0" max="10" value="8" step="2"><br>
+	颜色类型:<input type="color"><br>
+	<input type="submit">
+  </form>
+ </body>
+</html>

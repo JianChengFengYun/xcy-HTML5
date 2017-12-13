@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>表单新元素</title>
+  <meta charset="utf-8" />
+ </head>
+
+ <body>
+  <!-- 
+	datalist元素
+	* <datalist>元素 - 定义备选项(并不显示)
+	* 配合<input>元素使用
+	  * 定义list属性 - 属性值等于<datalist>元素的id属性值
+	* 效果 - 和<select>下拉列表类似
+	* 特点 - 数据与结构的分离
+	  * 数据 - 预定义数据内容<datalist>
+	  * 结构 - 显示在HTML页面中的元素<input>
+	* 优点 - 使用<datalist>元素定义的数据,可以重复使用
+  -->
+  <select>
+	<option>请选择</option>
+	<option>北京</option>
+	<option>南京</option>
+	<option>天津</option>
+  </select>
+  <br>
+  <datalist id="mylist">
+	<option>请选择</option>
+	<option>北京</option>
+	<option>南京</option>
+	<option>天津</option>
+  </datalist>
+  <input type="text" list="mylist"><br>
+  <!--
+	<progress>元素 - 进度条
+	* max - 设置进度条的最大值
+	* 没有min属性 - 最小值为0
+	* value - 表示当前的进度值
+  -->
+  <progress max="100" value="0" id="progress"></progress>
+  <br>
+  <!--
+	<meter>元素 - 刻度
+	* min - 最小值
+	* max - 最大值
+	* value - 当前值
+	* low - 低预警值
+	* high - 高预警值
+  -->
+  <meter min="0" max="100" value="8" low="10" high="90"></meter>
+  <br>
+  <!--
+	<output>元素(了解) - 输出
+  -->
+  <output for="">
+  <script>
+	function mychange(){
+		var progress = document.getElementById("progress");
+		var value = progress.value;
+		value++;
+		progress.value = value;
+		
+		if(value == 100){
+			clearTimeout(t);
+		}
+		
+		t = setTimeout("mychange()",100);
+	}
+	mychange();
+  </script>
+ </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <button id="start" value="开始计数">开始计数</button>
+        <button id="end" value="结束计数">结束计数</button>
+		<div id="time">0</div>
+		<script>
+		var start=document.getElementById("start");
+		var end=document.getElementById("end");
+		var time=document.getElementById("time");
+		start.onclick=myStart;
+		end.onclick=myEnd;
+		var c=0;
+		var timer=null;
+		function myStart(){
+			timer=setInterval(function(){
+			c++;
+			time.innerHTML=c;
+				
+			},1000);
+		}
+		function myEnd(){
+			clearInterval(timer);
+		}
+		</script>
+    </body>
+</html>
