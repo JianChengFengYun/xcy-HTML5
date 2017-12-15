@@ -1,3 +1,16 @@
 # xcy-HTML5
 - HTML5 demos
+    - input新类型
+    - 表单新元素
+    - 表单验证属性
+    - 表单验证状态
+    - video
+    - audio
+    - 地图
+    - HTML5拖放
+    - WebWorker
+    - sessionStorage
+    - localStorage
 - CSS3 demos
+    - 选择器
+    - css animate
